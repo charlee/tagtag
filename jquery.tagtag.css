@@ -1,0 +1,48 @@
+.tagtag-container {
+  border: solid 1px #ccc;
+}
+
+.tagtag-input {
+  border: 0;
+  outline: none;
+  font-size: 12px;
+}
+
+.tagtag-tag {
+  display: inline-block;
+  border: solid 1px #ccc;
+  background: #eee;
+  color: #333;
+  border-radius: 4px;
+  margin: 2px 2px;
+}
+
+.tagtag-tag:hover {
+  border: solid 1px #888;
+}
+
+.tagtag-taginvalid {
+  background: transparent;
+  border: 0;
+  border-bottom: dotted 2px #f00;
+  border-radius: 0;
+}
+
+.tagtag-tagcontent {
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+.tagtag-tagclose {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url(data:image/gif;base64,R0lGODlhBwAHAJEAAAAAAP///8zMzP///yH5BAEAAAMALAAAAAAHAAcAAAINnIYna7yP2klPORdPAQA7);
+  background-repeat: no-repeat;
+  background-position: 2px 4px;
+  cursor: pointer;
+}
+
+.tagtag-tagclose:hover {
+  background-image: url(data:image/gif;base64,R0lGODlhBwAHAJEAAAAAAP///4iIiP///yH5BAEAAAMALAAAAAAHAAcAAAINnIYna7yP2klPORdPAQA7);
+}

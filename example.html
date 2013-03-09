@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="jquery-ui-1.10.1.custom.js"></script>
+    <script src="jquery.tagtag.js"></script>
+    <link rel="stylesheet" href="jquery.tagtag.css" />
+    <script>
+
+$(document).ready(function() {
+
+  var emailValidator = function(s) {
+    
+    s = $.trim(s);
+    var name, addr, p = s.indexOf('<');
+
+    if (p >= 0 && s.charAt(s.length - 1) == '>') {
+      name = $.trim(s.substring(0, p));
+      addr = s.substring(p+1, s.length - 1);
+    } else {
+      addr = s;
+    }
+
+    if (name) {
+      // check quote
+      if (!name.match(/^(["'])[^"']+\1$|^[^"']+$/)) return false;
+
+    }
+
+    return !!addr.match(/^[-0-9A-Za-z!#$%&'*+\/=?^_`{|}~.]+@[-0-9A-Za-z!#$%&'*+\/=?^_`{|}~.]+/);
+  }
+
+  $("#to").tagtag({
+    delimiter: ',;',
+    validator: emailValidator
+  });
+
+
+});
+
+
+    </script>
+    <title>E-mail auto-complete</title>
+</head>
+<body>
+
+To: <input type="text" name="to" id="to" value="charlee@yahoo.co.jp, charlee@gmail.com" /><br/>
+    
+</body>
+</html>
